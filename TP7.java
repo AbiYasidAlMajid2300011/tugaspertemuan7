@@ -22,11 +22,10 @@ public class TP7 {
 
     public static void main(String[] args) {
         Scanner objInput = new Scanner(System.in);
-        int totalRandomNum, n;
+        int totalRandomNum;
         
         System.out.print("Masukkan jumlah angka random: ");
-        n = objInput.nextInt();
-        totalRandomNum = n;
+        totalRandomNum = objInput.nextInt();
         
         int[] num = new int[totalRandomNum];
         Random randomNum = new Random();
