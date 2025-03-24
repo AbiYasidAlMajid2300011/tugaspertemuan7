@@ -1,6 +1,7 @@
 package com.abiyasidalmajid2300011.tugaspertemuan7;
 
 import java.util.Random;
+import java.util.Scanner;
 
 public class TP7 {
     public static void selectionSort(int[] num) {
@@ -20,7 +21,13 @@ public class TP7 {
     }
 
     public static void main(String[] args) {
-        int totalRandomNum = 100000;
+        Scanner objInput = new Scanner(System.in);
+        int totalRandomNum, n;
+        
+        System.out.print("Masukkan jumlah angka random: ");
+        n = objInput.nextInt();
+        totalRandomNum = n;
+        
         int[] num = new int[totalRandomNum];
         Random randomNum = new Random();
         
@@ -36,7 +43,7 @@ public class TP7 {
         
         stopwatch.stop();
         
-        System.out.println("Waktu eksekusi selection sort untuk mengurutkan 100000 angka random: ");
+        System.out.println("Waktu eksekusi selection sort untuk mengurutkan " + totalRandomNum + " angka random: ");
         System.out.println(stopwatch.getElapsedTime() + " ms");
     }    
 }
